@@ -1,47 +1,71 @@
-import { Map, Navigation, Compass } from 'lucide-react';
+import { Map, Navigation, Compass, MapPin } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const MapSearchSection = () => {
   return (
-    <section className="py-20 md:py-32 bg-white relative overflow-hidden" id="features">
+    <section className="py-24 md:py-32 bg-white relative overflow-hidden" id="features">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
-          <div className="flex flex-col gap-6 order-2 lg:order-1">
-            <h2 className="text-3xl md:text-5xl font-bold text-forest leading-tight">
-              Tìm nơi ở ngay <br/>trên bản đồ
+          <motion.div 
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col gap-8 order-2 lg:order-1"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-forest/5 text-forest font-bold w-fit border border-forest/10">
+              <Map className="w-4 h-4" /> Bản đồ thông minh
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-charcoal leading-[1.1] tracking-tight">
+              Tìm nơi ở ngay <br/>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-forest to-sage">trên bản đồ</span>
             </h2>
             
-            <p className="text-lg text-charcoal/70 leading-relaxed mb-4">
+            <p className="text-xl text-charcoal/70 leading-relaxed font-medium">
               Không còn phải vất vả tra cứu từng con đường. Homie mang đến trải nghiệm tìm kiếm trực quan ngay trên bản đồ tương tác.
             </p>
             
-            <div className="flex flex-col gap-5">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-sage/15 flex items-center justify-center flex-shrink-0 mt-1 text-forest">
-                  <Navigation className="w-6 h-6" />
+            <div className="flex flex-col gap-8 mt-4">
+              <motion.div 
+                whileHover={{ x: 10 }}
+                className="flex items-start gap-5 p-4 -ml-4 rounded-2xl hover:bg-ivory transition-colors cursor-pointer"
+              >
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-sage/20 to-forest/10 flex items-center justify-center flex-shrink-0 mt-1 text-forest shadow-sm border border-forest/5">
+                  <Navigation className="w-7 h-7" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-charcoal mb-2">Khám phá khu vực xung quanh</h3>
-                  <p className="text-charcoal/70">Dễ dàng xem các tiện ích xung quanh như chợ, trường học, trạm xe buýt chỉ với vài thao tác.</p>
+                  <p className="text-charcoal/70 font-medium">Dễ dàng xem các tiện ích xung quanh như chợ, trường học, trạm xe buýt chỉ với vài thao tác.</p>
                 </div>
-              </div>
+              </motion.div>
               
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-sage/15 flex items-center justify-center flex-shrink-0 mt-1 text-forest">
-                  <Compass className="w-6 h-6" />
+              <motion.div 
+                whileHover={{ x: 10 }}
+                className="flex items-start gap-5 p-4 -ml-4 rounded-2xl hover:bg-ivory transition-colors cursor-pointer"
+              >
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-sand/20 to-ivory flex items-center justify-center flex-shrink-0 mt-1 text-sand shadow-sm border border-sand/5">
+                  <Compass className="w-7 h-7" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-charcoal mb-2">So sánh vị trí thông minh</h3>
-                  <p className="text-charcoal/70">Tìm kiếm các địa điểm tối ưu, cân bằng khoảng cách giữa nơi học tập và làm việc của bạn.</p>
+                  <h3 className="text-xl font-bold text-charcoal mb-2">So sánh vị trí tối ưu</h3>
+                  <p className="text-charcoal/70 font-medium">Tìm kiếm các địa điểm tuyệt vời, cân bằng khoảng cách giữa nơi học tập và làm việc của bạn.</p>
                 </div>
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="relative order-1 lg:order-2">
-            <div className="relative w-full aspect-square md:aspect-[4/3] rounded-3xl bg-ivory shadow-xl overflow-hidden border border-black/5">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
+            whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, type: "spring" }}
+            className="relative order-1 lg:order-2"
+          >
+            <div className="relative w-full aspect-square md:aspect-[4/3] rounded-[2.5rem] bg-ivory shadow-[0_30px_60px_rgba(0,0,0,0.12)] overflow-hidden border border-white/50 group">
               {/* Map mockup */}
-              <div className="absolute inset-0 bg-sage/5">
+              <div className="absolute inset-0 bg-sage/5 transition-transform duration-1000 group-hover:scale-105">
                 {/* Google Maps iframe background */}
                 <div className="absolute inset-0 pointer-events-none">
                   <iframe 
@@ -55,52 +79,81 @@ const MapSearchSection = () => {
                   ></iframe>
                 </div>
                 
+                {/* Blur overlay for better contrast at the edges */}
+                <div className="absolute inset-0 shadow-[inset_0_0_100px_rgba(247,245,237,0.5)] pointer-events-none"></div>
+                
                 {/* Location markers */}
-                <div className="absolute top-1/4 left-1/4 group cursor-pointer z-10">
-                  <div className="bg-forest text-white px-3 py-1.5 rounded-lg shadow-md font-bold text-sm mb-1 group-hover:scale-105 transition-transform">
+                <motion.div 
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.4 }}
+                  className="absolute top-1/4 left-1/4 cursor-pointer z-10"
+                >
+                  <div className="bg-charcoal text-white px-3.5 py-1.5 rounded-xl shadow-lg font-bold text-sm mb-1 hover:scale-110 transition-transform">
                     3.5tr
                   </div>
-                  <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-forest mx-auto"></div>
-                </div>
+                  <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-charcoal mx-auto drop-shadow-md"></div>
+                </motion.div>
                 
-                <div className="absolute top-1/2 right-1/4 group cursor-pointer z-10">
-                  <div className="bg-sand text-white px-3 py-1.5 rounded-lg shadow-md font-bold text-sm mb-1 scale-110">
+                <motion.div 
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.6 }}
+                  className="absolute top-1/2 right-1/4 z-20"
+                >
+                  <div className="bg-forest text-white px-4 py-2 rounded-xl shadow-xl font-extrabold text-sm mb-1 scale-110 ring-4 ring-forest/20 animate-pulse">
                     4.2tr
                   </div>
-                  <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-sand mx-auto"></div>
+                  <div className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[10px] border-t-forest mx-auto drop-shadow-lg"></div>
                   
                   {/* Property Card Popup */}
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-48 bg-white rounded-xl shadow-xl p-2 border border-black/5 animate-in fade-in zoom-in-95">
-                    <div className="w-full h-24 bg-gray-200 rounded-lg mb-2"></div>
-                    <div className="text-xs font-bold text-forest mb-1">Phòng trọ cao cấp</div>
-                    <div className="text-[10px] text-charcoal/60 mb-2">Quận 7, TP.HCM</div>
-                    <div className="flex justify-between items-center">
-                       <span className="text-xs font-bold">4.200.000đ</span>
-                       <span className="text-[10px] bg-sage/20 text-forest px-2 py-0.5 rounded">Trống</span>
+                  <motion.div 
+                    initial={{ opacity: 0, scale: 0.8, y: 10 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ delay: 1, type: "spring" }}
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-56 bg-white/90 backdrop-blur-xl rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] p-3 border border-white"
+                  >
+                    <div className="w-full h-28 rounded-xl mb-3 overflow-hidden">
+                       <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&q=80&w=400" className="w-full h-full object-cover" alt="room"/>
                     </div>
-                  </div>
-                </div>
+                    <div className="text-sm font-extrabold text-charcoal mb-1">Phòng trọ ban công</div>
+                    <div className="text-[10px] font-medium text-gray-500 mb-2 flex items-center gap-1"><MapPin className="w-3 h-3"/> Quận 7, TP.HCM</div>
+                    <div className="flex justify-between items-center mt-2 pt-2 border-t border-gray-100">
+                       <span className="text-sm font-black text-forest">4.200.000đ</span>
+                       <span className="text-[9px] font-bold bg-sage/15 text-forest px-2 py-1 rounded-full uppercase tracking-wider">Trống</span>
+                    </div>
+                  </motion.div>
+                </motion.div>
                 
-                <div className="absolute bottom-1/4 left-1/2 group cursor-pointer">
-                  <div className="bg-forest text-white px-3 py-1.5 rounded-lg shadow-md font-bold text-sm mb-1 group-hover:scale-105 transition-transform">
+                <motion.div 
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.8 }}
+                  className="absolute bottom-1/4 left-1/2 cursor-pointer z-10"
+                >
+                  <div className="bg-charcoal text-white px-3.5 py-1.5 rounded-xl shadow-lg font-bold text-sm mb-1 hover:scale-110 transition-transform">
                     2.8tr
                   </div>
-                  <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-forest mx-auto"></div>
-                </div>
+                  <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-charcoal mx-auto drop-shadow-md"></div>
+                </motion.div>
               </div>
             </div>
             
             {/* Floating badge */}
-            <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-black/5 flex items-center gap-4 animate-bounce-slow hidden md:flex">
-              <div className="w-12 h-12 bg-sage/20 rounded-full flex items-center justify-center text-forest">
-                <Map className="w-6 h-6" />
+            <motion.div 
+              animate={{ y: [-10, 10, -10] }}
+              transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+              className="absolute -bottom-8 -left-8 bg-white/90 backdrop-blur-xl p-5 rounded-[2rem] shadow-2xl border border-white flex items-center gap-5 hidden md:flex"
+            >
+              <div className="w-14 h-14 bg-gradient-to-br from-sage/30 to-forest/20 rounded-2xl flex items-center justify-center text-forest shadow-inner">
+                <Map className="w-7 h-7" />
               </div>
               <div>
-                <div className="font-bold text-charcoal">Hơn 10.000+</div>
-                <div className="text-sm text-charcoal/60">địa điểm trên bản đồ</div>
+                <div className="font-extrabold text-2xl text-charcoal">10.000+</div>
+                <div className="text-sm font-medium text-charcoal/60 uppercase tracking-wider">địa điểm trên bản đồ</div>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
           
         </div>
       </div>
