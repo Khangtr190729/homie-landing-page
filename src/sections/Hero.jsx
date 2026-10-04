@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
-        <img src="/hero-bg.jpg?v=3" alt="Background" className="w-full h-full object-cover" />
+        <img src={`${import.meta.env.BASE_URL}hero-bg.jpg`} alt="Background" className="w-full h-full object-cover" />
       </div>
       <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-white/10 z-0 backdrop-blur-[2px]"></div>
 
