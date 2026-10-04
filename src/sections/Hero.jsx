@@ -3,11 +3,12 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section className="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden bg-ivory">
-      {/* Dynamic Backgrounds */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-sage/40 via-forest/10 to-transparent rounded-full blur-[100px] -z-10 mix-blend-multiply"></div>
-      <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-gradient-to-tr from-sand/30 via-ivory/20 to-transparent rounded-full blur-[120px] -z-10"></div>
-      <div className="absolute top-[20%] left-[20%] w-[300px] h-[300px] bg-forest/5 rounded-full blur-[80px] -z-10 mix-blend-multiply"></div>
+    <section className="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+      {/* Background Image & Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img src="/hero-bg.jpg?v=3" alt="Background" className="w-full h-full object-cover" />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-white/10 z-0 backdrop-blur-[2px]"></div>
 
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
