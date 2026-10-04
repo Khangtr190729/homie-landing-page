@@ -7,7 +7,7 @@ const SafeSearchSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           <div className="relative order-2 lg:order-1">
-            <div className="relative w-full aspect-square md:aspect-[4/3] rounded-3xl bg-forest/5 shadow-inner overflow-hidden flex items-center justify-center p-8">
+            <div className="relative w-full aspect-square md:aspect-[4/3] rounded-3xl bg-gradient-to-br from-sage/20 to-forest/10 shadow-inner overflow-hidden flex items-center justify-center p-8">
               {/* App UI mockup */}
               <div className="w-full max-w-sm bg-white rounded-3xl shadow-2xl overflow-hidden border border-black/5 transform -rotate-2 hover:rotate-0 transition-transform duration-500">
                 <div className="p-5 border-b border-gray-100 flex items-center justify-between">

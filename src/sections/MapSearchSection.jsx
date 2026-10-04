@@ -42,16 +42,21 @@ const MapSearchSection = () => {
             <div className="relative w-full aspect-square md:aspect-[4/3] rounded-3xl bg-ivory shadow-xl overflow-hidden border border-black/5">
               {/* Map mockup */}
               <div className="absolute inset-0 bg-sage/5">
-                {/* Decorative map lines */}
-                <svg className="absolute w-full h-full opacity-20" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0,50 Q100,100 200,50 T400,50" stroke="#78947B" strokeWidth="4" fill="none" />
-                  <path d="M0,150 Q100,200 200,150 T400,150" stroke="#78947B" strokeWidth="4" fill="none" />
-                  <path d="M100,0 V400" stroke="#78947B" strokeWidth="4" fill="none" />
-                  <path d="M300,0 V400" stroke="#78947B" strokeWidth="4" fill="none" />
-                </svg>
+                {/* Google Maps iframe background */}
+                <div className="absolute inset-0 pointer-events-none">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15676.818968032733!2d106.6958434!3d10.7963625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1714000000000!5m2!1svi!2s" 
+                    width="100%" 
+                    height="100%" 
+                    style={{ border: 0 }} 
+                    allowFullScreen="" 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
                 
                 {/* Location markers */}
-                <div className="absolute top-1/4 left-1/4 group cursor-pointer">
+                <div className="absolute top-1/4 left-1/4 group cursor-pointer z-10">
                   <div className="bg-forest text-white px-3 py-1.5 rounded-lg shadow-md font-bold text-sm mb-1 group-hover:scale-105 transition-transform">
                     3.5tr
                   </div>

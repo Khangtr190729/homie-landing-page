@@ -2,7 +2,12 @@ import { Box, Truck, Paintbrush, ArrowDown } from 'lucide-react';
 
 const EcosystemSection = () => {
   return (
-    <section className="py-24 bg-sage/10 relative">
+    <section className="py-24 relative overflow-hidden bg-white">
+      {/* Dynamic Backgrounds */}
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-sage/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
+      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-sand/10 rounded-full blur-3xl -z-10 animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-sage/5 -z-20"></div>
+
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-forest mb-6">

@@ -27,9 +27,9 @@ const Navbar = () => {
         </nav>
 
         <div className="hidden md:block">
-          <button className="bg-forest text-white px-6 py-2.5 rounded-full font-medium hover:bg-forest/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+          <a href="#download" className="inline-block bg-forest text-white px-6 py-2.5 rounded-full font-medium hover:bg-forest/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
             Tải ứng dụng
-          </button>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -44,9 +44,9 @@ const Navbar = () => {
           <a href="#features" className="text-lg font-medium text-charcoal" onClick={() => setMobileMenuOpen(false)}>Tính năng</a>
           <a href="#about" className="text-lg font-medium text-charcoal" onClick={() => setMobileMenuOpen(false)}>Về Homie</a>
           <a href="#contact" className="text-lg font-medium text-charcoal" onClick={() => setMobileMenuOpen(false)}>Liên hệ</a>
-          <button className="bg-forest text-white px-6 py-3 rounded-full font-medium w-full text-center mt-2 shadow-md">
+          <a href="#download" className="bg-forest text-white px-6 py-3 rounded-full font-medium w-full text-center mt-2 shadow-md inline-block" onClick={() => setMobileMenuOpen(false)}>
             Tải ứng dụng ngay
-          </button>
+          </a>
         </div>
       )}
     </header>
