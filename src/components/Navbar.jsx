@@ -16,7 +16,7 @@ const Navbar = () => {
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'glass py-3' : 'bg-transparent py-5'}`}>
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         <a href="#" className="flex items-center gap-2 font-bold text-2xl tracking-tight">
-          <Logo className="h-12 w-auto mix-blend-multiply" />
+          <Logo className="h-12 w-auto" />
         </a>
 
         {/* Desktop Nav */}
