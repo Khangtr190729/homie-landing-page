@@ -1,14 +1,13 @@
-import { Home } from 'lucide-react';
+import { Logo } from './Logo';
 
 const Footer = () => {
   return (
-    <footer className="bg-forest text-ivory/80 py-16">
+    <footer className="bg-mocha text-ivory/80 py-16">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           <div className="col-span-1 md:col-span-2">
             <a href="#" className="flex items-center gap-2 text-white font-bold text-2xl tracking-tight mb-4">
-              <Home className="w-8 h-8" />
-              <span>Homie</span>
+              <Logo className="h-12 w-auto rounded-lg" />
             </a>
             <p className="text-ivory/70 text-lg max-w-sm mb-6">
               Tìm nơi ở dễ dàng hơn. Giải pháp toàn diện cho hành trình tìm kiếm không gian sống lý tưởng của bạn.

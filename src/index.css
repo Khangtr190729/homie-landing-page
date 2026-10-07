@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-ivory text-charcoal font-sans antialiased;
+    @apply bg-ivory text-mocha font-sans antialiased;
   }
 }
 

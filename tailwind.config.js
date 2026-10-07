@@ -7,11 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        'forest': '#244C3B',
-        'sage': '#78947B',
-        'ivory': '#F7F5ED',
-        'sand': '#D9A477',
-        'charcoal': '#29342E',
+        'mocha': '#3B2A20',
+        'brown': '#7B5E4A',
+        'ivory': '#FAF7F0',
+        'caramel': '#A67C52',
+        'latte': '#D1B89A',
+        'cream': '#F2E7D5',
       },
       fontFamily: {
         sans: ['Inter', 'Roboto', 'Outfit', 'sans-serif'],

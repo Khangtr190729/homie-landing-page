@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-ivory overflow-x-hidden text-charcoal selection:bg-forest/20">
+    <div className="min-h-screen flex flex-col bg-ivory overflow-x-hidden text-mocha selection:bg-mocha/20">
       <Navbar />
       <main className="flex-grow pt-20">
         <Hero />

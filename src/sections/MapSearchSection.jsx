@@ -14,16 +14,16 @@ const MapSearchSection = () => {
             transition={{ duration: 0.8 }}
             className="flex flex-col gap-8 order-2 lg:order-1"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-forest/5 text-forest font-bold w-fit border border-forest/10">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-mocha/5 text-mocha font-bold w-fit border border-mocha/10">
               <Map className="w-4 h-4" /> Bản đồ thông minh
             </div>
             
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-charcoal leading-[1.1] tracking-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-mocha leading-[1.1] tracking-tight">
               Tìm nơi ở ngay <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-forest to-sage">trên bản đồ</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-mocha to-brown">trên bản đồ</span>
             </h2>
             
-            <p className="text-xl text-charcoal/70 leading-relaxed font-medium">
+            <p className="text-xl text-mocha/70 leading-relaxed font-medium">
               Không còn phải vất vả tra cứu từng con đường. Homie mang đến trải nghiệm tìm kiếm trực quan ngay trên bản đồ tương tác.
             </p>
             
@@ -32,12 +32,12 @@ const MapSearchSection = () => {
                 whileHover={{ x: 10 }}
                 className="flex items-start gap-5 p-4 -ml-4 rounded-2xl hover:bg-ivory transition-colors cursor-pointer"
               >
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-sage/20 to-forest/10 flex items-center justify-center flex-shrink-0 mt-1 text-forest shadow-sm border border-forest/5">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-brown/20 to-mocha/10 flex items-center justify-center flex-shrink-0 mt-1 text-mocha shadow-sm border border-mocha/5">
                   <Navigation className="w-7 h-7" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-charcoal mb-2">Khám phá khu vực xung quanh</h3>
-                  <p className="text-charcoal/70 font-medium">Dễ dàng xem các tiện ích xung quanh như chợ, trường học, trạm xe buýt chỉ với vài thao tác.</p>
+                  <h3 className="text-xl font-bold text-mocha mb-2">Khám phá khu vực xung quanh</h3>
+                  <p className="text-mocha/70 font-medium">Dễ dàng xem các tiện ích xung quanh như chợ, trường học, trạm xe buýt chỉ với vài thao tác.</p>
                 </div>
               </motion.div>
               
@@ -45,12 +45,12 @@ const MapSearchSection = () => {
                 whileHover={{ x: 10 }}
                 className="flex items-start gap-5 p-4 -ml-4 rounded-2xl hover:bg-ivory transition-colors cursor-pointer"
               >
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-sand/20 to-ivory flex items-center justify-center flex-shrink-0 mt-1 text-sand shadow-sm border border-sand/5">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-caramel/20 to-ivory flex items-center justify-center flex-shrink-0 mt-1 text-caramel shadow-sm border border-caramel/5">
                   <Compass className="w-7 h-7" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-charcoal mb-2">So sánh vị trí tối ưu</h3>
-                  <p className="text-charcoal/70 font-medium">Tìm kiếm các địa điểm tuyệt vời, cân bằng khoảng cách giữa nơi học tập và làm việc của bạn.</p>
+                  <h3 className="text-xl font-bold text-mocha mb-2">So sánh vị trí tối ưu</h3>
+                  <p className="text-mocha/70 font-medium">Tìm kiếm các địa điểm tuyệt vời, cân bằng khoảng cách giữa nơi học tập và làm việc của bạn.</p>
                 </div>
               </motion.div>
             </div>
@@ -65,7 +65,7 @@ const MapSearchSection = () => {
           >
             <div className="relative w-full aspect-square md:aspect-[4/3] rounded-[2.5rem] bg-ivory shadow-[0_30px_60px_rgba(0,0,0,0.12)] overflow-hidden border border-white/50 group">
               {/* Map mockup */}
-              <div className="absolute inset-0 bg-sage/5 transition-transform duration-1000 group-hover:scale-105">
+              <div className="absolute inset-0 bg-brown/5 transition-transform duration-1000 group-hover:scale-105">
                 {/* Google Maps iframe background */}
                 <div className="absolute inset-0 pointer-events-none">
                   <iframe 
@@ -89,10 +89,10 @@ const MapSearchSection = () => {
                   transition={{ delay: 0.4 }}
                   className="absolute top-1/4 left-1/4 cursor-pointer z-10"
                 >
-                  <div className="bg-charcoal text-white px-3.5 py-1.5 rounded-xl shadow-lg font-bold text-sm mb-1 hover:scale-110 transition-transform">
+                  <div className="bg-mocha text-white px-3.5 py-1.5 rounded-xl shadow-lg font-bold text-sm mb-1 hover:scale-110 transition-transform">
                     3.5tr
                   </div>
-                  <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-charcoal mx-auto drop-shadow-md"></div>
+                  <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-mocha mx-auto drop-shadow-md"></div>
                 </motion.div>
                 
                 <motion.div 
@@ -101,10 +101,10 @@ const MapSearchSection = () => {
                   transition={{ delay: 0.6 }}
                   className="absolute top-1/2 right-1/4 z-20"
                 >
-                  <div className="bg-forest text-white px-4 py-2 rounded-xl shadow-xl font-extrabold text-sm mb-1 scale-110 ring-4 ring-forest/20 animate-pulse">
+                  <div className="bg-mocha text-white px-4 py-2 rounded-xl shadow-xl font-extrabold text-sm mb-1 scale-110 ring-4 ring-mocha/20 animate-pulse">
                     4.2tr
                   </div>
-                  <div className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[10px] border-t-forest mx-auto drop-shadow-lg"></div>
+                  <div className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[10px] border-t-mocha mx-auto drop-shadow-lg"></div>
                   
                   {/* Property Card Popup */}
                   <motion.div 
@@ -116,11 +116,11 @@ const MapSearchSection = () => {
                     <div className="w-full h-28 rounded-xl mb-3 overflow-hidden">
                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&q=80&w=400" className="w-full h-full object-cover" alt="room"/>
                     </div>
-                    <div className="text-sm font-extrabold text-charcoal mb-1">Phòng trọ ban công</div>
+                    <div className="text-sm font-extrabold text-mocha mb-1">Phòng trọ ban công</div>
                     <div className="text-[10px] font-medium text-gray-500 mb-2 flex items-center gap-1"><MapPin className="w-3 h-3"/> Quận 7, TP.HCM</div>
                     <div className="flex justify-between items-center mt-2 pt-2 border-t border-gray-100">
-                       <span className="text-sm font-black text-forest">4.200.000đ</span>
-                       <span className="text-[9px] font-bold bg-sage/15 text-forest px-2 py-1 rounded-full uppercase tracking-wider">Trống</span>
+                       <span className="text-sm font-black text-mocha">4.200.000đ</span>
+                       <span className="text-[9px] font-bold bg-brown/15 text-mocha px-2 py-1 rounded-full uppercase tracking-wider">Trống</span>
                     </div>
                   </motion.div>
                 </motion.div>
@@ -131,10 +131,10 @@ const MapSearchSection = () => {
                   transition={{ delay: 0.8 }}
                   className="absolute bottom-1/4 left-1/2 cursor-pointer z-10"
                 >
-                  <div className="bg-charcoal text-white px-3.5 py-1.5 rounded-xl shadow-lg font-bold text-sm mb-1 hover:scale-110 transition-transform">
+                  <div className="bg-mocha text-white px-3.5 py-1.5 rounded-xl shadow-lg font-bold text-sm mb-1 hover:scale-110 transition-transform">
                     2.8tr
                   </div>
-                  <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-charcoal mx-auto drop-shadow-md"></div>
+                  <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-mocha mx-auto drop-shadow-md"></div>
                 </motion.div>
               </div>
             </div>
@@ -145,12 +145,12 @@ const MapSearchSection = () => {
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
               className="absolute -bottom-8 -left-8 bg-white/90 backdrop-blur-xl p-5 rounded-[2rem] shadow-2xl border border-white flex items-center gap-5 hidden md:flex"
             >
-              <div className="w-14 h-14 bg-gradient-to-br from-sage/30 to-forest/20 rounded-2xl flex items-center justify-center text-forest shadow-inner">
+              <div className="w-14 h-14 bg-gradient-to-br from-brown/30 to-mocha/20 rounded-2xl flex items-center justify-center text-mocha shadow-inner">
                 <Map className="w-7 h-7" />
               </div>
               <div>
-                <div className="font-extrabold text-2xl text-charcoal">10.000+</div>
-                <div className="text-sm font-medium text-charcoal/60 uppercase tracking-wider">địa điểm trên bản đồ</div>
+                <div className="font-extrabold text-2xl text-mocha">10.000+</div>
+                <div className="text-sm font-medium text-mocha/60 uppercase tracking-wider">địa điểm trên bản đồ</div>
               </div>
             </motion.div>
           </motion.div>
